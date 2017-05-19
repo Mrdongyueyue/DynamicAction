@@ -15,6 +15,7 @@
 		3C88B4061ECE8A02007E6426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C88B4041ECE8A02007E6426 /* LaunchScreen.storyboard */; };
 		3C88B4111ECE8A02007E6426 /* DynamicActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B4101ECE8A02007E6426 /* DynamicActionTests.m */; };
 		3C88B41C1ECE8A02007E6426 /* DynamicActionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B41B1ECE8A02007E6426 /* DynamicActionUITests.m */; };
+		3C88B42B1ECE8D8A007E6426 /* YYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B42A1ECE8D8A007E6426 /* YYView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		3C88B4171ECE8A02007E6426 /* DynamicActionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicActionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C88B41B1ECE8A02007E6426 /* DynamicActionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicActionUITests.m; sourceTree = "<group>"; };
 		3C88B41D1ECE8A02007E6426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C88B4291ECE8D8A007E6426 /* YYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYView.h; sourceTree = "<group>"; };
+		3C88B42A1ECE8D8A007E6426 /* YYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				3C88B3FA1ECE8A02007E6426 /* AppDelegate.m */,
 				3C88B3FC1ECE8A02007E6426 /* ViewController.h */,
 				3C88B3FD1ECE8A02007E6426 /* ViewController.m */,
+				3C88B4291ECE8D8A007E6426 /* YYView.h */,
+				3C88B42A1ECE8D8A007E6426 /* YYView.m */,
 				3C88B3FF1ECE8A02007E6426 /* Main.storyboard */,
 				3C88B4021ECE8A02007E6426 /* Assets.xcassets */,
 				3C88B4041ECE8A02007E6426 /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C88B42B1ECE8D8A007E6426 /* YYView.m in Sources */,
 				3C88B3FE1ECE8A02007E6426 /* ViewController.m in Sources */,
 				3C88B3FB1ECE8A02007E6426 /* AppDelegate.m in Sources */,
 				3C88B3F81ECE8A02007E6426 /* main.m in Sources */,
