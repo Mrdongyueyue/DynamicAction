@@ -24,7 +24,7 @@
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
-    NSInteger count = 9;
+    NSInteger count = 2;
     CGFloat itemW = 30;
     CGFloat dotY = 30;
     NSMutableArray <UIView *>* dots = [NSMutableArray array];
@@ -35,7 +35,9 @@
         CGFloat Y = 200;
         
         if (i == 0) {
-            Y = sqrt((200 - dotY) * (200 - dotY) - X * X) + dotY;
+            if (count > 1) {
+                Y = sqrt((200 - dotY) * (200 - dotY) - X * X) + dotY;
+            }
             X = 0;
         }
         YYView *view = [[YYView alloc] initWithFrame:CGRectMake(X, Y, itemW, itemW)];
