@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7732EA1EF1356F002EDF17 /* GravityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7732E91EF1356F002EDF17 /* GravityViewController.m */; };
+		3C7732EC1EF136D4002EDF17 /* GravityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7732EB1EF136D4002EDF17 /* GravityViewController.xib */; };
 		3C88B3F81ECE8A02007E6426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B3F71ECE8A02007E6426 /* main.m */; };
 		3C88B3FB1ECE8A02007E6426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B3FA1ECE8A02007E6426 /* AppDelegate.m */; };
 		3C88B3FE1ECE8A02007E6426 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88B3FD1ECE8A02007E6426 /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C7732E81EF1356F002EDF17 /* GravityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GravityViewController.h; sourceTree = "<group>"; };
+		3C7732E91EF1356F002EDF17 /* GravityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GravityViewController.m; sourceTree = "<group>"; };
+		3C7732EB1EF136D4002EDF17 /* GravityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GravityViewController.xib; sourceTree = "<group>"; };
 		3C88B3F31ECE8A02007E6426 /* DynamicAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C88B3F71ECE8A02007E6426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C88B3F91ECE8A02007E6426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +113,9 @@
 				3C88B3FA1ECE8A02007E6426 /* AppDelegate.m */,
 				3C88B3FC1ECE8A02007E6426 /* ViewController.h */,
 				3C88B3FD1ECE8A02007E6426 /* ViewController.m */,
+				3C7732E81EF1356F002EDF17 /* GravityViewController.h */,
+				3C7732E91EF1356F002EDF17 /* GravityViewController.m */,
+				3C7732EB1EF136D4002EDF17 /* GravityViewController.xib */,
 				3C88B4291ECE8D8A007E6426 /* YYView.h */,
 				3C88B42A1ECE8D8A007E6426 /* YYView.m */,
 				3C88B3FF1ECE8A02007E6426 /* Main.storyboard */,
@@ -257,6 +265,7 @@
 				3C88B4061ECE8A02007E6426 /* LaunchScreen.storyboard in Resources */,
 				3C88B4031ECE8A02007E6426 /* Assets.xcassets in Resources */,
 				3C88B4011ECE8A02007E6426 /* Main.storyboard in Resources */,
+				3C7732EC1EF136D4002EDF17 /* GravityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +294,7 @@
 				3C88B3FE1ECE8A02007E6426 /* ViewController.m in Sources */,
 				3C88B3FB1ECE8A02007E6426 /* AppDelegate.m in Sources */,
 				3C88B3F81ECE8A02007E6426 /* main.m in Sources */,
+				3C7732EA1EF1356F002EDF17 /* GravityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +534,7 @@
 				3C88B4221ECE8A02007E6426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C88B4231ECE8A02007E6426 /* Build configuration list for PBXNativeTarget "DynamicActionTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +543,7 @@
 				3C88B4251ECE8A02007E6426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C88B4261ECE8A02007E6426 /* Build configuration list for PBXNativeTarget "DynamicActionUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +552,7 @@
 				3C88B4281ECE8A02007E6426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

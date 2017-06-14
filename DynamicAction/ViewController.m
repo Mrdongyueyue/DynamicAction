@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YYView.h"
+#import "GravityViewController.h"
 
 @interface ViewController ()
 
@@ -41,6 +42,10 @@
             X = 0;
         }
         YYView *view = [[YYView alloc] initWithFrame:CGRectMake(X, Y, itemW, itemW)];
+        view.layer.cornerRadius = itemW / 2;
+        view.layer.borderWidth = 1;
+        view.layer.borderColor = UIColor.lightGrayColor.CGColor;
+        view.layer.masksToBounds = YES;
         [self.view addSubview:view];
         
         UIView *dot = [[UIView alloc] init];
@@ -86,6 +91,11 @@
     };
     
     
+}
+
+- (IBAction)showGravity:(UIButton *)sender {
+    GravityViewController *gravity = [[GravityViewController alloc] init];
+    [self showDetailViewController:gravity sender:nil];
 }
 
 
