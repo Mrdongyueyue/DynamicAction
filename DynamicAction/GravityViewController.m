@@ -11,10 +11,15 @@
 #import <CoreMotion/CoreMotion.h>
 
 @interface GravityViewController ()
+@property (weak, nonatomic) IBOutlet UIView *funcView;
 
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 
 @property (strong, nonatomic) UIGravityBehavior *gravity;
+
+@property (strong, nonatomic) UICollisionBehavior *collision;
+
+@property (strong, nonatomic) UIDynamicItemBehavior *itemBehavior;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
@@ -29,29 +34,33 @@
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
-    NSInteger count = 35;
+    NSInteger count = 5;
     CGFloat itemW = 30;
     NSMutableArray <UIView *>* items = [NSMutableArray array];
     for (NSInteger i = 0; i < count; i ++) {
         CGFloat X = i % 10 * itemW;
-        CGFloat Y = 200 + (35 + i / 10);
+        CGFloat Y = (35 + i / 10);
         
         YYView *view = [[YYView alloc] initWithFrame:CGRectMake(X, Y, itemW, itemW)];
         view.layer.cornerRadius = itemW / 2;
         view.layer.borderWidth = 1;
         view.layer.borderColor = UIColor.lightGrayColor.CGColor;
         view.layer.masksToBounds = YES;
-        [self.view addSubview:view];
+        [self.view insertSubview:view belowSubview:_funcView];
         
         [items addObject:view];
     }
     _gravity = [[UIGravityBehavior alloc] initWithItems:items];
     [_animator addBehavior:_gravity];
     
-    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:items];
-    [collision addBoundaryWithIdentifier:@"view" forPath:[UIBezierPath bezierPathWithRect:[UIScreen mainScreen].bounds]];
-    [_animator addBehavior:collision];
+    _collision = [[UICollisionBehavior alloc] initWithItems:items];
+    [_collision addBoundaryWithIdentifier:@"view" forPath:[UIBezierPath bezierPathWithRect:[UIScreen mainScreen].bounds]];
+    [_animator addBehavior:_collision];
     
+    _itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:items];
+    _itemBehavior.elasticity = 0.5;
+    _itemBehavior.allowsRotation = YES;
+    [_animator addBehavior:_itemBehavior];
     
     _motionManager = [[CMMotionManager alloc] init];
     
@@ -98,6 +107,27 @@ NS_INLINE BOOL CGVectorEqualToVector(CGVector vector0, CGVector vector1) {
 
 - (IBAction)dismissClick:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)addButtonClick:(UIButton *)sender {
+    NSInteger count = 10;
+    CGFloat itemW = 30;
+    
+    for (NSInteger i = 0; i < count; i ++) {
+        CGFloat X = i % 10 * itemW;
+        CGFloat Y = (35 + i / 10);
+        
+        YYView *view = [[YYView alloc] initWithFrame:CGRectMake(X, Y, itemW, itemW)];
+        view.layer.cornerRadius = itemW / 2;
+        view.layer.borderWidth = 1;
+        view.layer.borderColor = UIColor.lightGrayColor.CGColor;
+        view.layer.masksToBounds = YES;
+        [self.view insertSubview:view belowSubview:_funcView];
+        
+        [_collision addItem:view];
+        [_gravity addItem:view];
+        [_itemBehavior addItem:view];
+    }
+    
 }
 
 @end

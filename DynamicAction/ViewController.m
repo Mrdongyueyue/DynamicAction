@@ -25,7 +25,7 @@
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
-    NSInteger count = 2;
+    NSInteger count = 5;
     CGFloat itemW = 30;
     CGFloat dotY = 30;
     NSMutableArray <UIView *>* dots = [NSMutableArray array];
@@ -66,6 +66,11 @@
     
     UICollisionBehavior *collision=[[UICollisionBehavior alloc] initWithItems:items];
     [_animator addBehavior:collision];
+    
+    UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:items];
+    itemBehavior.elasticity = 1;
+    itemBehavior.allowsRotation = YES;
+    [_animator addBehavior:itemBehavior];
     
     
     _layers = [NSMutableArray array];

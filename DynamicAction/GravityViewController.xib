@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GravityViewController">
             <connections>
+                <outlet property="funcView" destination="iuO-5z-ynL" id="boU-8s-zHO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="aRZ-c1-BFZ"/>
             </connections>
         </placeholder>
@@ -19,18 +20,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga3-9x-bxb">
-                    <rect key="frame" x="161.5" y="617" width="52" height="30"/>
-                    <state key="normal" title="dismiss"/>
-                    <connections>
-                        <action selector="dismissClick:" destination="-1" eventType="touchUpInside" id="cDR-ik-pcy"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuO-5z-ynL">
+                    <rect key="frame" x="140.5" y="635" width="94" height="22"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw1-EE-zwQ">
+                            <rect key="frame" x="72" y="0.0" width="22" height="22"/>
+                            <connections>
+                                <action selector="addButtonClick:" destination="-1" eventType="touchUpInside" id="KTP-gX-L6k"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga3-9x-bxb">
+                            <rect key="frame" x="0.0" y="-4" width="52" height="30"/>
+                            <state key="normal" title="dismiss"/>
+                            <connections>
+                                <action selector="dismissClick:" destination="-1" eventType="touchUpInside" id="cDR-ik-pcy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Uw1-EE-zwQ" secondAttribute="bottom" id="6On-iz-zLW"/>
+                        <constraint firstItem="Uw1-EE-zwQ" firstAttribute="top" secondItem="iuO-5z-ynL" secondAttribute="top" id="6gR-MU-ojv"/>
+                        <constraint firstItem="ga3-9x-bxb" firstAttribute="leading" secondItem="iuO-5z-ynL" secondAttribute="leading" id="8Ja-zi-bGw"/>
+                        <constraint firstItem="Uw1-EE-zwQ" firstAttribute="leading" secondItem="ga3-9x-bxb" secondAttribute="trailing" constant="20" id="GzA-OK-Xlj"/>
+                        <constraint firstItem="ga3-9x-bxb" firstAttribute="centerY" secondItem="iuO-5z-ynL" secondAttribute="centerY" id="vly-as-RMF"/>
+                        <constraint firstAttribute="trailing" secondItem="Uw1-EE-zwQ" secondAttribute="trailing" id="yUF-Sa-arP"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ga3-9x-bxb" secondAttribute="bottom" constant="20" id="dBf-RZ-pFO"/>
-                <constraint firstItem="ga3-9x-bxb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xHc-pa-rMR"/>
+                <constraint firstItem="iuO-5z-ynL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TFb-c5-yZ2"/>
+                <constraint firstAttribute="bottom" secondItem="iuO-5z-ynL" secondAttribute="bottom" constant="10" id="xBo-OW-IQ4"/>
             </constraints>
         </view>
     </objects>
